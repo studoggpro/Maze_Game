@@ -27,36 +27,40 @@ public class Door {
     public void createDoor(GridPane room, double dX, double dY){
         int hdX = ((int)dX + 2) / 2;
         int hdY = ((int)dY + 2) / 2;
-        String[] location = new String[4];
-        location[0] = "Top";
-        location[1] = "Bottom";
-        location[2] = "Left";
-        location[3] = "Right";
-        for (String side : location) {
-
+        /*Location[] location = new Location[4];
+        location[0] = Location.TOP;
+        location[1] = Location.BOTTOM;
+        location[2] = Location.LEFT;
+        location[3] = Location.RIGHT;*/
+        for (Location side : Location.values()) {
             Rectangle door = new Rectangle(65, 65, Paint.valueOf("#074f57"));
-            door.setId(side + "Door" + room.getId());
-            if (side.equals("Top")){
-                room.add(door, hdX, 0);
-                room.setHalignment(door, HPos.CENTER);
-                room.setValignment(door, VPos.TOP);
-                topDoorList.add(door);
-            }
-            if (side.equals("Bottom")){
-                room.add(door, hdX, (int)dY + 1);
-                room.setHalignment(door, HPos.CENTER);
-                room.setValignment(door, VPos.BOTTOM);
-                bottomDoorList.add(door);
-            }
-            if (side.equals("Left")){
-                room.add(door, 0, hdY);
-                room.setHalignment(door, HPos.LEFT);
-                leftDoorList.add(door);
-            }
-            if (side.equals("Right")){
-                room.add(door, (int)dX + 1, hdY);
-                room.setHalignment(door, HPos.RIGHT);
-                rightDoorList.add(door);
+            door.setId(String.valueOf(side) + "Door" + room.getId());
+            switch (side){
+                case TOP:
+                    room.add(door, hdX, 0);
+                    room.setHalignment(door, HPos.CENTER);
+                    room.setValignment(door, VPos.TOP);
+                    topDoorList.add(door);
+                    break;
+                case BOTTOM:
+                    room.add(door, hdX, (int)dY + 1);
+                    room.setHalignment(door, HPos.CENTER);
+                    room.setValignment(door, VPos.BOTTOM);
+                    bottomDoorList.add(door);
+                    break;
+                case LEFT:
+                    room.add(door, 0, hdY);
+                    room.setHalignment(door, HPos.LEFT);
+                    leftDoorList.add(door);
+                    break;
+                case RIGHT:
+                    room.add(door, (int)dX + 1, hdY);
+                    room.setHalignment(door, HPos.RIGHT);
+                    rightDoorList.add(door);
+                    break;
+                default:
+                    System.out.println("invalid door id");
+                    break;
             }
             doorMap.put(door.getId(), door);
         }

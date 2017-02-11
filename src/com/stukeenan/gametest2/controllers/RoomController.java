@@ -1,6 +1,7 @@
 package com.stukeenan.gametest2.controllers;
 
 import com.stukeenan.gametest2.model.Door;
+import com.stukeenan.gametest2.model.Location;
 import com.stukeenan.gametest2.model.MovePlayer;
 import com.stukeenan.gametest2.model.Room;
 import javafx.animation.AnimationTimer;
@@ -84,8 +85,8 @@ public class RoomController {
         int row = 0;
         for (Node rm : rooms.generateRooms()){
             if (rm.getId().matches("room1")){
-                col = ((GridPane) rm).getColumnIndex(Door.doorMap.get("BottomDoorroom1"));
-                row = ((GridPane) rm).getRowIndex(Door.doorMap.get("BottomDoorroom1"));
+                col = ((GridPane) rm).getColumnIndex(Door.doorMap.get("BOTTOMDoorroom1"));
+                row = ((GridPane) rm).getRowIndex(Door.doorMap.get("BOTTOMDoorroom1"));
                 ((GridPane) rm).add(player, col, row);
                 ((GridPane) rm).setHalignment(player, HPos.CENTER);
                 ((GridPane) rm).setValignment(player, VPos.BOTTOM);
@@ -153,25 +154,25 @@ public class RoomController {
                         obstacle.getBoundsInParent().getWidth() - 6,
                         5.0);
                 topBoundaryList.add(topBoundary);
-                boundaryMap.put(key + "Top", topBoundaryList);
+                boundaryMap.put(key + String.valueOf(Location.TOP), topBoundaryList);
                 Bounds bottomBoundary = new BoundingBox(obstacle.getBoundsInParent().getMinX() + 3,
                         obstacle.getBoundsInParent().getMinY() + obstacle.getBoundsInParent().getHeight() - 2.0,
                         obstacle.getBoundsInParent().getWidth() - 6,
                         3.0);
                 bottomBoundaryList.add(bottomBoundary);
-                boundaryMap.put(key + "Bottom", bottomBoundaryList);
+                boundaryMap.put(key + String.valueOf(Location.BOTTOM), bottomBoundaryList);
                 Bounds leftBoundary = new BoundingBox(obstacle.getBoundsInParent().getMinX(),
                         obstacle.getBoundsInParent().getMinY() + 3,
                         5.0,
                         obstacle.getBoundsInParent().getHeight() - 3);
                 leftBoundaryList.add(leftBoundary);
-                boundaryMap.put(key + "Left", leftBoundaryList);
+                boundaryMap.put(key + String.valueOf(Location.LEFT), leftBoundaryList);
                 Bounds rightBoundary = new BoundingBox(obstacle.getBoundsInParent().getMinX() + obstacle.getBoundsInParent().getWidth() - 3.0,
                         obstacle.getBoundsInParent().getMinY() + 3,
                         5.0,
                         obstacle.getBoundsInParent().getHeight() - 3);
                 rightBoundaryList.add(rightBoundary);
-                boundaryMap.put(key + "Right", rightBoundaryList);
+                boundaryMap.put(key + String.valueOf(Location.RIGHT), rightBoundaryList);
             }
         }
     }
@@ -203,28 +204,28 @@ public class RoomController {
     private boolean moveAcceptable() {
         if (player.getParent() != null) {
             String roomId = player.getParent().getId();
-            for (Bounds bounds : boundaryMap.get(roomId + "Bottom")) {
+            for (Bounds bounds : boundaryMap.get(roomId + String.valueOf(Location.BOTTOM))) {
                 if ((playerDirection == KeyCode.UP && playerHitBox[0].intersects(bounds)) ||
                         (playerDirection == KeyCode.DOWN && playerHitBox[2].intersects(bounds))) {
 //                    System.out.println("hit bottom" + roomId);
                     return false;
                 }
             }
-            for (Bounds bounds : boundaryMap.get(roomId + "Top")) {
+            for (Bounds bounds : boundaryMap.get(roomId + String.valueOf(Location.TOP))) {
                 if ((playerDirection == KeyCode.UP && playerHitBox[0].intersects(bounds)) ||
                         (playerDirection == KeyCode.DOWN && playerHitBox[2].intersects(bounds))) {
 //                    System.out.println("hit top");
                     return false;
                 }
             }
-            for (Bounds bounds : boundaryMap.get(roomId + "Right")) {
+            for (Bounds bounds : boundaryMap.get(roomId + String.valueOf(Location.RIGHT))) {
                 if ((playerDirection == KeyCode.RIGHT && playerHitBox[1].intersects(bounds)) ||
                         (playerDirection == KeyCode.LEFT && playerHitBox[3].intersects(bounds))) {
 //                    System.out.println("hit right");
                     return false;
                 }
             }
-            for (Bounds bounds : boundaryMap.get(roomId + "Left")) {
+            for (Bounds bounds : boundaryMap.get(roomId + String.valueOf(Location.LEFT))) {
                 if ((playerDirection == KeyCode.LEFT && playerHitBox[3].intersects(bounds)) ||
                         (playerDirection == KeyCode.RIGHT && playerHitBox[1].intersects(bounds))) {
 //                    System.out.println("hit left");

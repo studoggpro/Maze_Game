@@ -22,11 +22,13 @@ public class MovePlayer {
                     System.out.println("FOUND in DOOR: " + child.getId());
                     oldParent.getChildren().remove(player);
                     oldParent.clearConstraints(player);
-                    if (child.getId().contains("Top") || child.getId().contains("Left")) {
+                    if (child.getId().contains(String.valueOf(Location.TOP)) ||
+                            child.getId().contains(String.valueOf(Location.LEFT))) {
                         changeParent(player, Door.mazeMap.get(child));
                         System.out.println("Destination: " + Door.mazeMap.get(child).getId());
                     } else {
-                        if (child.getId().contains("Bottom") || child.getId().contains("Right")) {
+                        if (child.getId().contains(String.valueOf(Location.BOTTOM)) ||
+                                child.getId().contains(String.valueOf(Location.RIGHT))) {
                             Node destination = Door.mazeMap.entrySet().stream()
                                     .filter(e -> child.equals(e.getValue()))
                                     .map(Map.Entry::getKey)
