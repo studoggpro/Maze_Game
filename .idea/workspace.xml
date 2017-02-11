@@ -4,11 +4,14 @@
     <option name="CUSTOM_SCOPE_NAME" value="Selection" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="update locations to using enum">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/controllers/RoomController$1.class" afterPath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/controllers/RoomController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/controllers/RoomController.class" afterPath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/controllers/RoomController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/Door.class" afterPath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/Door.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/MovePlayer.class" afterPath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/MovePlayer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/gametest2/controllers/RoomController.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/gametest2/controllers/RoomController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/MovePlayer.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/MovePlayer.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,7 +78,7 @@
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="2159">
               <caret line="137" column="59" lean-forward="false" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
               <folding />
             </state>
@@ -85,8 +88,8 @@
       <file leaf-file-name="Door.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-609">
-              <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            <state relative-caret-position="289">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +100,7 @@
       <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/controllers/RoomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="3417">
               <caret line="227" column="91" lean-forward="true" selection-start-line="227" selection-start-column="91" selection-end-line="227" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,7 +109,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovePlayer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovePlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/MovePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -128,12 +131,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreatePath.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreatePath.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="-320">
+              <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,11 +217,11 @@
         <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/door.java" />
         <option value="$PROJECT_DIR$/resources/fxml/RoomController.fxml" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Location.java" />
-        <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Room.java" />
-        <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/controllers/RoomController.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/MovePlayer.java" />
+        <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java" />
+        <option value="$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java" />
       </list>
     </option>
   </component>
@@ -702,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486681979824</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update locations to using enum">
+      <created>1486832154493</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1486832154493</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1106,42 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="137" column="59" lean-forward="false" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/controllers/RoomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="227" column="91" lean-forward="true" selection-start-line="227" selection-start-column="91" selection-end-line="227" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1150,10 +1126,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="137" column="59" lean-forward="false" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/MovePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="84" lean-forward="false" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/controllers/RoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="227" column="91" lean-forward="true" selection-start-line="227" selection-start-column="91" selection-end-line="227" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/Door.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/gametest2/model/CreatePath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-320">
+          <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

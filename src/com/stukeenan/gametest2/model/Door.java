@@ -15,10 +15,10 @@ import java.util.stream.Collectors;
  */
 public class Door {
     private ArrayList<String> parentIDList = new ArrayList<>();
-    private ArrayList<Node> bottomDoorList = new ArrayList<>();
-    private ArrayList<Node> leftDoorList = new ArrayList<>();
-    private ArrayList<Node> rightDoorList = new ArrayList<>();
-    private ArrayList<Node> topDoorList = new ArrayList<>();
+    public static LinkedList<Node> bottomDoorList = new LinkedList<>();
+    public static LinkedList<Node> leftDoorList = new LinkedList<>();
+    public static LinkedList<Node> rightDoorList = new LinkedList<>();
+    public static LinkedList<Node> topDoorList = new LinkedList<>();
     private boolean closedLoopCheckOneDone = false;
     public static Map<String, Node> doorMap = new HashMap<>(64);
     public static Map<Node, Node> mazeMap = new HashMap<>(64);
@@ -27,11 +27,6 @@ public class Door {
     public void createDoor(GridPane room, double dX, double dY){
         int hdX = ((int)dX + 2) / 2;
         int hdY = ((int)dY + 2) / 2;
-        /*Location[] location = new Location[4];
-        location[0] = Location.TOP;
-        location[1] = Location.BOTTOM;
-        location[2] = Location.LEFT;
-        location[3] = Location.RIGHT;*/
         for (Location side : Location.values()) {
             Rectangle door = new Rectangle(65, 65, Paint.valueOf("#074f57"));
             door.setId(String.valueOf(side) + "Door" + room.getId());
@@ -77,7 +72,7 @@ public class Door {
     public Door(){
     }
 
-    private void checkForClosedLoops(ArrayList<Node> list1, ArrayList<Node> list2) {
+    private void checkForClosedLoops(LinkedList<Node> list1, LinkedList<Node> list2) {
         for (int i = 0; i < list1.size(); i++) {
             String parent1 = list1.get(i).getParent().getId();
             String parent2 = list2.get(i).getParent().getId();
