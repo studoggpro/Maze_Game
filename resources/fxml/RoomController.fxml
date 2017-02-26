@@ -10,12 +10,12 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stukeenan.gametest2.controllers.RoomController">
+<Pane stylesheets="/css/MazeGame.css" fx:id="window" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stukeenan.gametest2.controllers.RoomController">
    <children>
-      <Pane fx:id="playSpace" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #474747;">
-          <Rectangle fx:id="player" fill="#ad343e" focusTraversable="true" height="50.0" stroke="BLACK" style="-fx-stroke-width: 3px; -fx-arc-width: 25; -fx-arc-height: 25;" width="50.0" />
+      <Pane fx:id="playSpace" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased">
+          <Rectangle fx:id="player" focusTraversable="true" height="50" width="50" />
       </Pane>
-      <Pane fx:id="mainMenu" layoutX="440.0" layoutY="160.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #ad343e; -fx-border-color: #000000; -fx-border-width: 5;">
+      <Pane fx:id="mainMenu" layoutX="440.0" layoutY="160.0">
          <children>
             <Button fx:id="startButton" layoutX="163.0" layoutY="188.0" mnemonicParsing="false" onAction="#startButtonPress" text="Fire It UP!!!" textAlignment="CENTER" />
             <Label layoutX="25.0" layoutY="74.0" text="IS IT WORKING YET!!!!">
@@ -25,7 +25,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="endMenu" layoutX="440.0" layoutY="160.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #A2DEF2; -fx-border-width: 5; -fx-border-color: #000000;" visible="false">
+      <Pane fx:id="endMenu" layoutX="440.0" layoutY="160.0" visible="false">
          <children>
             <Label layoutX="20.0" layoutY="118.0" text="!!!A WINNER IS YOU!!!" textAlignment="CENTER">
                <font>

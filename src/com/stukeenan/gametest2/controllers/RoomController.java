@@ -1,9 +1,6 @@
 package com.stukeenan.gametest2.controllers;
 
-import com.stukeenan.gametest2.model.Door;
-import com.stukeenan.gametest2.model.Location;
-import com.stukeenan.gametest2.model.MovePlayer;
-import com.stukeenan.gametest2.model.Room;
+import com.stukeenan.gametest2.model.*;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.LongProperty;
@@ -77,16 +74,16 @@ public class RoomController {
     protected Pane playSpace;
 
     @FXML
-    public Rectangle player;
+    protected Rectangle player;
 
     @FXML
     public void initialize() {
         int col = 0;
         int row = 0;
         for (Node rm : rooms.generateRooms()){
-            if (rm.getId().matches("room1")){
-                col = ((GridPane) rm).getColumnIndex(Door.doorMap.get("BOTTOMDoorroom1"));
-                row = ((GridPane) rm).getRowIndex(Door.doorMap.get("BOTTOMDoorroom1"));
+            if (rm.getId().matches("room0")){
+                col = ((GridPane) rm).getColumnIndex(Door.doorMap.get("BOTTOMDoorroom0"));
+                row = ((GridPane) rm).getRowIndex(Door.doorMap.get("BOTTOMDoorroom0"));
                 ((GridPane) rm).add(player, col, row);
                 ((GridPane) rm).setHalignment(player, HPos.CENTER);
                 ((GridPane) rm).setValignment(player, VPos.BOTTOM);
@@ -98,12 +95,36 @@ public class RoomController {
 
             }
         }
+        Maze maze = new Maze();
+        maze.createMaze();
         player.getParent().toFront();
         System.out.println(playSpace.getBoundsInParent().toString());
         System.out.println(playSpace.getChildren());
         System.out.println("FXML loaded");
         System.out.println("col: " + col + " row: " + row);
-        Door.mazeMap.entrySet().forEach(e -> System.out.println(e.getKey().getId() + " <-> " + e.getValue().getId()));
+        for (Map.Entry entry: Maze.mazeMap.entrySet()) {
+            String key = null;
+            String value = null;
+            if (entry.getKey() != null && entry.getValue() != null){
+                key = ((Node)entry.getKey()).getId();
+                value = ((Node)entry.getValue()).getId();
+            }
+            if (entry.getKey() == null){
+                key = "null";
+                value = ((Node)entry.getValue()).getId();
+            }
+            if (entry.getValue() == null){
+                key = ((Node)entry.getKey()).getId();
+                value = "null";
+            }
+            System.out.println(key + " <-> " + value);
+        }
+        for (int i = 0; i < 4 ; i++) {
+            for (int j = 0; j < Room.mazeLength; j++){
+                System.out.print(maze.mazeArray[j][i] + " | ");
+            }
+            System.out.println();
+        }
     }
 
     public RoomController(){
@@ -125,11 +146,11 @@ public class RoomController {
            restart(event);
         }
         if (event.getCode() == KeyCode.X){
-            if (Door.exitDoor.getBoundsInParent().contains(player.getBoundsInParent())){
+            if (Maze.exitDoor.getBoundsInParent().contains(player.getBoundsInParent())){
                 player.setVisible(false);
                 endMenu.setVisible(true);
             } else {
-                MovePlayer.MovePlayer(player);
+                MovePlayer.movePlayer(player);
             }
         }
     }
@@ -241,7 +262,7 @@ public class RoomController {
         createCollisionBox();
         player.getParent().setVisible(true);
         System.out.println("solid list " + rooms.solidObjectMap);
-        System.out.println("exit door: " + Door.exitDoor.getId());
+        System.out.println("exit door: " + Maze.exitDoor.getId());
     }
 
     public void restartButtonPressed(ActionEvent event) throws IOException {
@@ -249,10 +270,11 @@ public class RoomController {
     }
 
     public void restart(Event event) throws IOException {
-        Door.mazeMap.clear();
+        Maze.mazeMap.clear();
         Door.doorMap.clear();
         Parent gameStartParent = FXMLLoader.load(getClass().getResource("/fxml/RoomController.fxml"));
         Scene gameStartScene = new Scene(gameStartParent);
+        gameStartScene.getStylesheets().add("/css/MazeGame.css");
         Stage gameStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         gameStage.hide();
         gameStage.setScene(gameStartScene);

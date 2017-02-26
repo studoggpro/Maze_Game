@@ -1,0 +1,55 @@
+.box {
+    -fx-stroke: #000000;
+    -fx-stroke-type: inside;
+    -fx-stroke-width: 3;
+    -fx-fill: #f2af29;
+}
+
+.door {
+    -fx-fill: #074f57;
+}
+
+#endMenu {
+    -fx-pref-height: 400px;
+    -fx-pref-width: 400px;
+    -fx-background-color: #A2DEF2;
+    -fx-border-width: 5;
+    -fx-border-color: #000000;
+}
+
+#mainMenu {
+    -fx-pref-height: 400px;
+    -fx-pref-width: 400px;
+    -fx-background-color: #ad343e;
+    -fx-border-color: #000000;
+    -fx-border-width: 5;
+}
+
+#player {
+    -fx-fill: #ad343e;
+    -fx-stroke-width: 3px;
+    -fx-stroke: #000000;
+    -fx-arc-width: 25;
+    -fx-arc-height: 25;
+}
+
+#playSpace {
+    /*-fx-max-height: infinity;
+    -fx-max-width: infinity;
+    -fx-min-height: infinity;
+    -fx-min-width: infinity;*/
+    -fx-pref-height: 720px;
+    -fx-pref-width: 1280px;
+    -fx-background-color: #474747;
+}
+
+.room {
+    -fx-background-color: #B8D3DB;
+    -fx-border-color: #000000;
+    -fx-border-style: solid outside;
+    -fx-border-width: 5;
+}
+
+#window {
+    -fx-background-color: #474747;
+}

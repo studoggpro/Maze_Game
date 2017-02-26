@@ -11,30 +11,39 @@ import java.util.Map;
  */
 public class MovePlayer {
 
-    public static void MovePlayer(Node player) {
+    public static void movePlayer(Node player) {
         Bounds playerBounds = player.getBoundsInParent();
         if (player.getParent() instanceof GridPane){
             GridPane oldParent = ((GridPane) player.getParent());
             for (Node child : oldParent.getChildren()) {
                 if (child.getId() != null
-                    && child.getId().matches("\\S*Door\\S*")
-                    && child.getBoundsInParent().contains(playerBounds)) {
+                        && child.getId().matches("\\S*Door\\S*")
+                        && child.getBoundsInParent().contains(playerBounds)) {
                     System.out.println("FOUND in DOOR: " + child.getId());
-                    oldParent.getChildren().remove(player);
-                    oldParent.clearConstraints(player);
-                    if (child.getId().contains(String.valueOf(Location.TOP)) ||
-                            child.getId().contains(String.valueOf(Location.LEFT))) {
-                        changeParent(player, Door.mazeMap.get(child));
-                        System.out.println("Destination: " + Door.mazeMap.get(child).getId());
+                    if (Maze.mazeMap.keySet().contains(child)) {
+                        if (Maze.mazeMap.get(child) != null) {
+                            oldParent.getChildren().remove(player);
+                            oldParent.clearConstraints(player);
+                            changeParent(player, Maze.mazeMap.get(child));
+                            System.out.println("Destination: " + Maze.mazeMap.get(child).getId());
+                        } else {
+                            System.out.println("Door to nowhere");
+                        }
                     } else {
-                        if (child.getId().contains(String.valueOf(Location.BOTTOM)) ||
-                                child.getId().contains(String.valueOf(Location.RIGHT))) {
-                            Node destination = Door.mazeMap.entrySet().stream()
-                                    .filter(e -> child.equals(e.getValue()))
-                                    .map(Map.Entry::getKey)
-                                    .findAny().get();
-                            changeParent(player, destination);
-                            System.out.println("Destination: " + destination.getId());
+                        if (Maze.mazeMap.values().contains(child)) {
+                            Node destination;
+                            try {
+                                destination = Maze.mazeMap.entrySet().stream()
+                                        .filter(e -> child.equals(e.getValue()))
+                                        .map(Map.Entry::getKey)
+                                        .findAny().orElse(null);
+                                oldParent.getChildren().remove(player);
+                                oldParent.clearConstraints(player);
+                                changeParent(player, destination);
+                                System.out.println("Destination: " + destination.getId());
+                            } catch (NullPointerException npe) {
+                                System.out.println("Door to nowhere");
+                            }
                         }
                     }
                     break;
