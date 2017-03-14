@@ -4,6 +4,7 @@ import com.stukeenan.gametest2.model.*;
 import com.sun.javafx.scene.control.skin.TableHeaderRow;
 import com.sun.javafx.scene.control.skin.TableViewSkinBase;
 import javafx.animation.AnimationTimer;
+import javafx.animation.FadeTransition;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.LongProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -277,6 +278,14 @@ public class RoomController implements Serializable {
         }
     }
 
+    private void finalFade(){
+        FadeTransition finalFade = new FadeTransition(javafx.util.Duration.seconds(.3), player);
+        finalFade.setFromValue(1.0);
+        finalFade.setToValue(0);
+        finalFade.setOnFinished(e -> player.setVisible(false));
+        finalFade.play();
+    }
+
 
     public void handleAddPlayer(ActionEvent event) throws FileNotFoundException {
         Save save = new Save();
@@ -324,12 +333,15 @@ public class RoomController implements Serializable {
         }
         if (event.getCode() == KeyCode.X){
             if (Maze.exitDoor.getBoundsInParent().contains(player.getBoundsInParent())){
-                player.setVisible(false);
+                finalFade();
                 endMenu.setVisible(true);
                 stop = Instant.now();
                 setYourTimeText();
             } else {
-                MovePlayer.movePlayer(player);
+                MovePlayer mp = new MovePlayer(player);
+                if (mp.validMovePlayer()){
+                    mp.fadeOut();
+                }
             }
         }
     }
@@ -417,7 +429,7 @@ public class RoomController implements Serializable {
         }
     }
 
-    public void setYourTimeText(){
+    private void setYourTimeText(){
         Duration time = Duration.between(start, stop);
         int minutes = (int) (time.getSeconds() % (60 * 60) / 60);
         int seconds = (int) (time.getSeconds() % 60);
