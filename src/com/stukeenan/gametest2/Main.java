@@ -11,9 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/RoomController.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/css/MazeGame.css");
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
         primaryStage.setResizable(false);
     }

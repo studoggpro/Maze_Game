@@ -4,16 +4,16 @@ import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Stu on 10/16/2016.
  */
 public class Door {
+    private int mDoorNumber;
     public static LinkedList<Node> bottomDoorList = new LinkedList<>();
     public static LinkedList<Node> leftDoorList = new LinkedList<>();
     public static LinkedList<Node> rightDoorList = new LinkedList<>();
@@ -24,8 +24,7 @@ public class Door {
         int hdX = ((int)dX + 2) / 2;
         int hdY = ((int)dY + 2) / 2;
         for (Location side : Location.values()) {
-            Rectangle door = new Rectangle(65, 65);
-            door.getStyleClass().add("door");
+            Rectangle door = new Rectangle(65, 65, Paint.valueOf("#074f57"));
             door.setId(String.valueOf(side) + "Door" + room.getId());
             switch (side){
                 case TOP:

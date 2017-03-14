@@ -5,6 +5,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 import java.awt.*;
@@ -22,7 +23,7 @@ public class Room {
     private double dY;
     public static int mazeLength = 3; //NUMBER OF ROOMS
     private Random random = new Random();
-    private List<Pane> roomList = new ArrayList<>();
+    public List<Pane> roomList = new ArrayList<>();
     private double[] roomSize = new double[2];
     private double smWidth;
     private double smHeight;
@@ -86,14 +87,14 @@ public class Room {
         int count = 0;
         for (int i = 0; i < boxCount; i++) {
             count++;
-            Rectangle box = new Rectangle(width, height);
+            Rectangle box = new Rectangle(width, height, Paint.valueOf("#f2af29"));
             box.setId("box" + count);
-            box.getStyleClass().add("box");
+            box.setStyle("-fx-stroke: #000000; -fx-stroke-type: inside; -fx-stroke-width: 3");
             room.add(box, ((Point)boxCoord.get(i)).x, ((Point)boxCoord.get(i)).y);
         }
     }
 
-    public List<Pane> generateRooms(){
+    public void generateRooms(){
         int roomCount = 0;
         for (int i = 0; i < mazeLength ; i++) {
             List<Node> solidObjectList = new ArrayList<>();
@@ -101,7 +102,7 @@ public class Room {
             generateHeight();
             calculateRoomDividers();
             GridPane room = new GridPane();
-//            room.setGridLinesVisible(true);
+            room.setGridLinesVisible(false);
             setColumnConstraints(room);
             setRowRestraints(room);
             room.setPrefSize(roomSize[0], roomSize[1]);
@@ -111,7 +112,8 @@ public class Room {
             setRoomMovable(room);
             createBoxes(room, smWidth, smHeight);
             if (!room.getChildren().isEmpty()){
-                solidObjectList.addAll(room.getChildren());
+                room.getChildren().stream().filter(child -> child instanceof Rectangle)
+                        .forEach(solidObjectList::add);
             }
             door.createDoor(room, dX, dY);
             roomList.add(room);
@@ -121,7 +123,6 @@ public class Room {
             boxCoord.clear();
             roomCount++;
         }
-        return roomList;
     }
 
     private void setColumnConstraints(GridPane pane){
