@@ -12,17 +12,15 @@ public class Load {
     public static ArrayList<ArrayList<String>> deserializePlayer() {
 
         ArrayList<ArrayList<String>> savedPlayers = new ArrayList<>();
-        File file = new File("F:\\Documents\\IdeaProjects\\game_test_2\\resources\\saveData\\timeTable.ser");
-        if (!file.exists()){
-            System.out.println("no save data found");
-        } else {
-
+        File file = new File("resources/saveData/timeTable.ser");
+        if (file.exists()){
             try (ObjectInputStream ois
                          = new ObjectInputStream(new FileInputStream(file))) {
                 Object inObj = ois.readObject();
                 if (inObj.getClass() == ArrayList.class) {
                     System.err.println("IS LIST");
                     savedPlayers = (ArrayList<ArrayList<String>>) inObj;
+                    ois.close();
                 }
 
 

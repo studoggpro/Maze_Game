@@ -366,7 +366,6 @@ public class RoomController implements Serializable {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.UP && playerHitBox[0].intersects(bounds)) ||
                         (playerDirection == KeyCode.DOWN && playerHitBox[2].intersects(bounds))) {
-//                    System.out.println("hit bottom" + roomId);
                     return false;
                 }
             }
@@ -374,7 +373,6 @@ public class RoomController implements Serializable {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.UP && playerHitBox[0].intersects(bounds)) ||
                         (playerDirection == KeyCode.DOWN && playerHitBox[2].intersects(bounds))) {
-//                    System.out.println("hit top");
                     return false;
                 }
             }
@@ -382,7 +380,6 @@ public class RoomController implements Serializable {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.RIGHT && playerHitBox[1].intersects(bounds)) ||
                         (playerDirection == KeyCode.LEFT && playerHitBox[3].intersects(bounds))) {
-//                    System.out.println("hit right");
                     return false;
                 }
             }
@@ -390,7 +387,6 @@ public class RoomController implements Serializable {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.LEFT && playerHitBox[3].intersects(bounds)) ||
                         (playerDirection == KeyCode.RIGHT && playerHitBox[1].intersects(bounds))) {
-//                    System.out.println("hit left");
                     return false;
                 }
             }
@@ -399,7 +395,6 @@ public class RoomController implements Serializable {
     }
 
     private void restart(Event event) throws IOException {
-//        Maze.mazeMap.clear();
         Door.doorMap.clear();
         Font.loadFont(getClass().getResource("/fonts/Kenney Future Square.ttf").toExternalForm(), 10);
         Parent gameStartParent = FXMLLoader.load(getClass().getResource("/fxml/RoomController.fxml"));

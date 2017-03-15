@@ -86,7 +86,6 @@ public class Maze {
             }
             if (i == pathLength){
                 exitDoor();
-//                mazeMap.put(exitDoor, null);
             }
             count++;
         }

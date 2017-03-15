@@ -13,7 +13,6 @@ import java.util.*;
  * Created by Stu on 10/16/2016.
  */
 public class Door {
-    private int mDoorNumber;
     public static LinkedList<Node> bottomDoorList = new LinkedList<>();
     public static LinkedList<Node> leftDoorList = new LinkedList<>();
     public static LinkedList<Node> rightDoorList = new LinkedList<>();
@@ -29,24 +28,24 @@ public class Door {
             switch (side){
                 case TOP:
                     room.add(door, hdX, 0);
-                    room.setHalignment(door, HPos.CENTER);
-                    room.setValignment(door, VPos.TOP);
+                    GridPane.setHalignment(door, HPos.CENTER);
+                    GridPane.setValignment(door, VPos.TOP);
                     topDoorList.add(door);
                     break;
                 case BOTTOM:
                     room.add(door, hdX, (int)dY + 1);
-                    room.setHalignment(door, HPos.CENTER);
-                    room.setValignment(door, VPos.BOTTOM);
+                    GridPane.setHalignment(door, HPos.CENTER);
+                    GridPane.setValignment(door, VPos.BOTTOM);
                     bottomDoorList.add(door);
                     break;
                 case LEFT:
                     room.add(door, 0, hdY);
-                    room.setHalignment(door, HPos.LEFT);
+                    GridPane.setHalignment(door, HPos.LEFT);
                     leftDoorList.add(door);
                     break;
                 case RIGHT:
                     room.add(door, (int)dX + 1, hdY);
-                    room.setHalignment(door, HPos.RIGHT);
+                    GridPane.setHalignment(door, HPos.RIGHT);
                     rightDoorList.add(door);
                     break;
                 default:

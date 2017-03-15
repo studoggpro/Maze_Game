@@ -24,10 +24,10 @@ public class Save {
         }
 
         try (ObjectOutputStream oos =
-                     new ObjectOutputStream(new FileOutputStream("F:\\Documents\\IdeaProjects\\game_test_2\\resources\\saveData\\timeTable.ser"))) {
+                     new ObjectOutputStream(new FileOutputStream("resources/saveData/timeTable.ser"))) {
 
             oos.writeObject(data);
-            System.out.println("Done");
+            System.out.println("saved");
 
         } catch (Exception ex) {
             ex.printStackTrace();
