@@ -1,0 +1,130 @@
+* {
+	-fx-font-family: 'Kenney Future Square';
+	-fx-font-size: 16px;
+	-fx-text-fill: #000000;
+}
+
+
+.box {
+    -fx-stroke: #000000;
+    -fx-stroke-type: inside;
+    -fx-stroke-width: 3;
+    -fx-fill: #f2af29;
+}
+
+.button {
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+	-fx-font-size: 20px;
+	-fx-background-color:#9E9E9E;
+	-fx-border-color: #000000;
+	-fx-border-width: 2px;
+	-fx-border-radius: 10;
+	-fx-border-style: solid outside;
+	-fx-background-radius: 10;
+}
+
+.door {
+    -fx-fill: #074f57;
+}
+
+#endMenu {
+	-fx-background-color: #A2DEF2; 
+	-fx-border-width: 5; 
+	-fx-border-color: #000000; 
+	-fx-border-style: solid outside;
+	-fx-pref-height: 400px;
+	-fx-pref-width: 400px;
+}
+
+#endMenuHeader {
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+	-fx-font-size: 40px;
+	-fx-fill: 
+		linear-gradient(from 0% 0% to 100% 100%,
+		#e40d0d 15%, #d9931c 35%, #d9d81c 45%, #20d91c 55%, #321cd9 75%, #d91cb7 85%);
+	-fx-effect: dropshadow(gaussian, #474747, 8, 0.6, 0, 0);
+}
+
+#endMenuTimeTable {
+	-fx-base: #A2DEF2;
+	-fx-background-color: #A2DEF2;
+	-fx-control-inner-background: #A2DEF2;
+	-fx-table-header-border-color: transparent;
+	-fx-table-cell-border-color: transparent;
+}
+
+#endMenuTimeTable .table-column, #endMenuTimeTable .filler {
+	-fx-background-color: #A2DEF2;
+	-fx-alignment: CENTER;
+}
+
+#endMenuTimeTable .table-row-cell:selected {
+	-fx-background-color: transparent;
+	-fx-table-cell-border-color: transparent;
+}
+
+#mainMenu {
+	-fx-background-color:  #ad343e;
+	-fx-border-color: #000000;
+	-fx-border-style: solid outside;
+	-fx-border-width: 5px;
+	-fx-pref-height: 400px;
+	-fx-pref-width: 400px;	
+}
+
+#mainMenuHeader {
+	-fx-font-size: 50px;
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+	-fx-effect: dropshadow(gaussian, #474747, 5, 0.3, 0, 0);
+}
+
+#mainMenuHowToPlay {
+	-fx-font-size: 20px;
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+}
+
+#mainMenuHowToPlayInstructions {
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+	-fx-wrap-text: true;
+}
+
+#player {
+    -fx-fill: #ad343e;
+    -fx-stroke-width: 3px;
+    -fx-stroke: #000000;
+    -fx-arc-width: 25;
+    -fx-arc-height: 25;
+}
+
+#playspace {
+	-fx-background-color: #474747;
+	-fx-pref-height: 720px;
+	-fx-pref-width: 1280px;
+}
+
+.room {
+    -fx-background-color: #B8D3DB;
+    -fx-border-color: #000000;
+    -fx-border-style: solid outside;
+    -fx-border-width: 5;
+}
+
+.roomBoundary {
+    -fx-fill: #B8D3DB;
+    -fx-opacity: 0.0;
+}
+
+.window {
+    -fx-background-color: #474747;
+}
+
+/*State based */
+
+.easyMode {
+	-fx-fill: #0DFF00;
+}
