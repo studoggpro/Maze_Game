@@ -18,7 +18,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<Pane styleClass="window" stylesheets="@../css/MazeGame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stukeenan.gametest2.controllers.RoomController">
+<Pane styleClass="window" stylesheets="@../css/MazeGame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stukeenan.Maze_Game.controllers.RoomController">
    <children>
       <Pane id="playspace" fx:id="playSpace" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased">
          <children>
