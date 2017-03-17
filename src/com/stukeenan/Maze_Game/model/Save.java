@@ -32,7 +32,7 @@ public class Save {
         }
 
         try (ObjectOutputStream oos =
-                     new ObjectOutputStream(new FileOutputStream("saveData/timeTable.ser"))) {
+                     new ObjectOutputStream(new FileOutputStream("production/Maze_Game/saveData/timeTable.ser"))) {
 
             oos.writeObject(data);
             System.out.println("saved");
