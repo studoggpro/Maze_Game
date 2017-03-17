@@ -34,7 +34,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serializable;
 import java.time.Duration;
@@ -287,7 +286,7 @@ public class RoomController implements Serializable {
     }
 
 
-    public void handleAddPlayer(ActionEvent event) throws FileNotFoundException {
+    public void handleAddPlayer(ActionEvent event) throws IOException {
         Save save = new Save();
         Player player = new Player(String.valueOf(nameText.getCharacters()),
                 playerTime, String.valueOf(Room.mazeLength));

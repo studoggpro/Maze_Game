@@ -12,7 +12,7 @@ public class Load {
     public static ArrayList<ArrayList<String>> deserializePlayer() {
 
         ArrayList<ArrayList<String>> savedPlayers = new ArrayList<>();
-        File file = new File("resources/saveData/timeTable.ser");
+        File file = new File("saveData/timeTable.ser");
         if (file.exists()){
             try (ObjectInputStream ois
                          = new ObjectInputStream(new FileInputStream(file))) {

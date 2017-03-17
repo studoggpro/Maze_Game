@@ -3,7 +3,11 @@ package com.stukeenan.Maze_Game.model;
 import javafx.collections.ObservableList;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 /**
@@ -11,8 +15,12 @@ import java.util.ArrayList;
  */
 public class Save {
 
-    public void serializeTimeTable(ObservableList<Player> players) {
+    public void serializeTimeTable(ObservableList<Player> players) throws IOException {
         ArrayList<ArrayList<String>> data = new ArrayList<>();
+        Path path = Paths.get("saveData");
+        if (!Files.isDirectory(path)){
+            Files.createDirectories(path);
+        }
         int counter = 0;
         for (Player p : players){
             ArrayList<String> player = new ArrayList<>(3);
@@ -24,7 +32,7 @@ public class Save {
         }
 
         try (ObjectOutputStream oos =
-                     new ObjectOutputStream(new FileOutputStream("resources/saveData/timeTable.ser"))) {
+                     new ObjectOutputStream(new FileOutputStream("saveData/timeTable.ser"))) {
 
             oos.writeObject(data);
             System.out.println("saved");
