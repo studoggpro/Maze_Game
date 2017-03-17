@@ -17,7 +17,7 @@ public class Save {
 
     public void serializeTimeTable(ObservableList<Player> players) throws IOException {
         ArrayList<ArrayList<String>> data = new ArrayList<>();
-        Path path = Paths.get("saveData");
+        Path path = Paths.get("production/Maze_Game/saveData");
         if (!Files.isDirectory(path)){
             Files.createDirectories(path);
         }

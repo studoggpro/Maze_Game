@@ -10,22 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Maze_Game_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/controllers/RoomController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/controllers/RoomController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/Door.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/Location.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/MovePlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/com/stukeenan/gametest2/model/Room.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/game_test_2/fxml/RoomController.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/saveData/timeTable.ser" afterPath="$PROJECT_DIR$/resources/saveData/timeTable.ser" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fxml/RoomController.fxml" afterPath="$PROJECT_DIR$/resources/fxml/RoomController.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/Main.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Load.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Load.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java" afterPath="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -149,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Save.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Save.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="94" lean-forward="false" selection-start-line="34" selection-start-column="94" selection-end-line="34" selection-end-column="94" />
+            <state relative-caret-position="323">
+              <caret line="19" column="63" lean-forward="true" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,9 +151,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,10 +166,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="2279">
               <caret line="400" column="65" lean-forward="true" selection-start-line="400" selection-start-column="65" selection-end-line="400" selection-end-column="65" />
               <folding />
             </state>
@@ -286,11 +269,11 @@
         <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/MovePlayer.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Player.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Room.java" />
-        <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Load.java" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java" />
         <option value="$PROJECT_DIR$/resources/fxml/RoomController.fxml" />
         <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java" />
       </list>
     </option>
   </component>
@@ -850,7 +833,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489623925300</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added font to initial load">
+      <created>1489710005274</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1489710005274</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -867,11 +857,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -898,7 +889,6 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -955,7 +945,8 @@
     <MESSAGE value="CSS styling complete" />
     <MESSAGE value="Fade transitions added" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="added font to initial load" />
+    <option name="LAST_COMMIT_MESSAGE" value="added font to initial load" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1240,34 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Load.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="94" lean-forward="false" selection-start-line="34" selection-start-column="94" selection-end-line="34" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="91" lean-forward="false" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fxml/RoomController.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1281,9 +1244,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="2279">
           <caret line="400" column="65" lean-forward="true" selection-start-line="400" selection-start-column="65" selection-end-line="400" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="91" lean-forward="false" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Load.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Save.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="63" lean-forward="true" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
