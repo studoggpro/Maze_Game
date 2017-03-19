@@ -38,10 +38,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -63,6 +60,10 @@ public class RoomController implements Serializable {
     private ObservableList<Player> players = FXCollections.observableArrayList();
     private Room rooms = new Room();
     private String playerTime;
+    private String bottom = String.valueOf(Location.BOTTOM);
+    private String left = String.valueOf(Location.LEFT);
+    private String right = String.valueOf(Location.RIGHT);
+    private String top = String.valueOf(Location.TOP);
     private final AnimationTimer playerMove = new AnimationTimer() {
         @Override
         public void handle(long timestamp) {
@@ -163,9 +164,9 @@ public class RoomController implements Serializable {
                     int rowIn = GridPane.getRowIndex(obstacle);
                     double height = obstacle.getBoundsInParent().getHeight();
                     double width = obstacle.getBoundsInParent().getWidth();
-                    String style = obstacle.getStyle();
+                    String style = "roomBoundary";
                     /*TOP BOUNDARY*/
-                    topBoundary = new Rectangle(width, 3);
+                    topBoundary = new Rectangle(width - 5, 3);
                     topBoundary.getStyleClass().add(style);
                     ((GridPane) obstacle.getParent()).add(topBoundary, colIn, rowIn);
                     GridPane.setHalignment(topBoundary, HPos.CENTER);
@@ -173,14 +174,14 @@ public class RoomController implements Serializable {
                     topBoundaryList.add(topBoundary);
 
                     /*RIGHT BOUNDARY*/
-                    rightBoundary = new Rectangle(3, height);
+                    rightBoundary = new Rectangle(3, height - 5);
                     rightBoundary.getStyleClass().add(style);
                     ((GridPane) obstacle.getParent()).add(rightBoundary, colIn, rowIn);
                     GridPane.setHalignment(rightBoundary, HPos.RIGHT);
                     rightBoundaryList.add(rightBoundary);
 
                     /*BOTTOM BOUNDARY*/
-                    bottomBoundary = new Rectangle(width, 3);
+                    bottomBoundary = new Rectangle(width - 5, 3);
                     bottomBoundary.getStyleClass().add(style);
                     ((GridPane) obstacle.getParent()).add(bottomBoundary, colIn, rowIn);
                     GridPane.setHalignment(bottomBoundary, HPos.CENTER);
@@ -188,7 +189,7 @@ public class RoomController implements Serializable {
                     bottomBoundaryList.add(bottomBoundary);
 
                     /*LEFT BOUNDARY*/
-                    leftBoundary = new Rectangle(3, height);
+                    leftBoundary = new Rectangle(3, height - 5);
                     leftBoundary.getStyleClass().add(style);
                     ((GridPane) obstacle.getParent()).add(leftBoundary, colIn, rowIn);
                     GridPane.setHalignment(leftBoundary, HPos.LEFT);
@@ -239,10 +240,10 @@ public class RoomController implements Serializable {
                     leftBoundaryList.add(leftBoundary);
                 }
             }
-            boundaryMap.put(key + String.valueOf(Location.TOP), topBoundaryList);
-            boundaryMap.put(key + String.valueOf(Location.RIGHT), rightBoundaryList);
-            boundaryMap.put(key + String.valueOf(Location.BOTTOM), bottomBoundaryList);
-            boundaryMap.put(key + String.valueOf(Location.LEFT), leftBoundaryList);
+            boundaryMap.put(key + top, topBoundaryList);
+            boundaryMap.put(key + right, rightBoundaryList);
+            boundaryMap.put(key + bottom, bottomBoundaryList);
+            boundaryMap.put(key + left, leftBoundaryList);
         }
     }
 
@@ -330,7 +331,7 @@ public class RoomController implements Serializable {
         if (event.getCode() == KeyCode.ESCAPE) {
             restart(event);
         }
-        if (event.getCode() == KeyCode.X){
+        if (event.getCode() == KeyCode.W){
             if (Maze.exitDoor.getBoundsInParent().contains(player.getBoundsInParent())){
                 finalFade();
                 endMenu.setVisible(true);
@@ -361,28 +362,28 @@ public class RoomController implements Serializable {
     private boolean moveAcceptable() {
         if (player.getParent() != null) {
             String roomId = player.getParent().getId();
-            for (Rectangle border : boundaryMap.get(roomId + String.valueOf(Location.BOTTOM))) {
+            for (Rectangle border : boundaryMap.get(roomId + bottom)) {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.UP && playerHitBox[0].intersects(bounds)) ||
                         (playerDirection == KeyCode.DOWN && playerHitBox[2].intersects(bounds))) {
                     return false;
                 }
             }
-            for (Rectangle border : boundaryMap.get(roomId + String.valueOf(Location.TOP))) {
+            for (Rectangle border : boundaryMap.get(roomId + top)) {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.UP && playerHitBox[0].intersects(bounds)) ||
                         (playerDirection == KeyCode.DOWN && playerHitBox[2].intersects(bounds))) {
                     return false;
                 }
             }
-            for (Rectangle border : boundaryMap.get(roomId + String.valueOf(Location.RIGHT))) {
+            for (Rectangle border : boundaryMap.get(roomId + right)) {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.RIGHT && playerHitBox[1].intersects(bounds)) ||
                         (playerDirection == KeyCode.LEFT && playerHitBox[3].intersects(bounds))) {
                     return false;
                 }
             }
-            for (Rectangle border : boundaryMap.get(roomId + String.valueOf(Location.LEFT))) {
+            for (Rectangle border : boundaryMap.get(roomId + left)) {
                 Bounds bounds = border.getBoundsInParent();
                 if ((playerDirection == KeyCode.LEFT && playerHitBox[3].intersects(bounds)) ||
                         (playerDirection == KeyCode.RIGHT && playerHitBox[1].intersects(bounds))) {

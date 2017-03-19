@@ -16,7 +16,7 @@
    <children>
       <Pane id="playspace" fx:id="playSpace" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased">
          <children>
-            <Rectangle id="player" fx:id="player" focusTraversable="true" height="50" visible="false" width="50" />
+            <Rectangle id="player" fx:id="player" focusTraversable="true" height="45" visible="false" width="45" />
          </children>
       </Pane>
       <VBox id="mainMenu" fx:id="mainMenu" layoutX="435.0" layoutY="155.0">
@@ -29,7 +29,7 @@
             <Pane>
                <children>
                   <Text id="mainMenuHowToPlay" layoutX="146.0" layoutY="18.0" text="HOW TO PLAY:" />
-                  <Text id="mainMenuHowToPlayInstructions" layoutX="4.0" layoutY="34.0" text="Use arrow keys to move around.  Press &quot;X&quot; when in a Door to go through." wrappingWidth="400.0" />
+                  <Text id="mainMenuHowToPlayInstructions" layoutX="4.0" layoutY="34.0" text="Use arrow keys to move around.  Press &quot;W&quot; when in a Door to go through." wrappingWidth="400.0" />
                </children>
             </Pane>
             <HBox>

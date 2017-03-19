@@ -5,7 +5,6 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 import java.awt.*;
@@ -87,9 +86,9 @@ public class Room {
         int count = 0;
         for (int i = 0; i < boxCount; i++) {
             count++;
-            Rectangle box = new Rectangle(width, height, Paint.valueOf("#f2af29"));
+            Rectangle box = new Rectangle(width, height);
             box.setId("box" + count);
-            box.setStyle("-fx-stroke: #000000; -fx-stroke-type: inside; -fx-stroke-width: 3");
+            box.getStyleClass().add("box");
             room.add(box, ((Point)boxCoord.get(i)).x, ((Point)boxCoord.get(i)).y);
         }
     }

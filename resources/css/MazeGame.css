@@ -7,7 +7,7 @@
 
 .box {
     -fx-stroke: #000000;
-    -fx-stroke-type: inside;
+    -fx-stroke-type: centered;
     -fx-stroke-width: 3;
     -fx-fill: #f2af29;
 }
