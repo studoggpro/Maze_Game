@@ -10,6 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/Maze_Game_jar/Maze_Game.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/controllers/RoomController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/controllers/RoomController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Door$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Door.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Load.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/LoadPlayerHistory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Location.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Maze.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/MovePlayer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Player.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Room.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/com/stukeenan/Maze_Game/model/Save.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/css/MazeGame.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/fonts/Kenney Future Square.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Maze_Game/fxml/RoomController.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -109,11 +127,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,7 +150,7 @@
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="1037">
               <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
               <folding />
             </state>
@@ -152,7 +180,7 @@
       <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4417">
+            <state relative-caret-position="2142">
               <caret line="164" column="77" lean-forward="false" selection-start-line="164" selection-start-column="77" selection-end-line="164" selection-end-column="77" />
               <folding />
             </state>
@@ -161,14 +189,14 @@
       </file>
       <file leaf-file-name="RoomController.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/fxml/RoomController.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="255">
               <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -278,8 +306,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -381,6 +407,24 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saveData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maze_Game_Stu_Keenan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maze_Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -402,6 +446,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,6 +468,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last.edited.regexp" value="TopDoorroom2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="add_unversioned_files" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -853,7 +900,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489934566736</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Merge branch 'createPath' of https://github.com/studoggpro/Maze_Game into createPath&#10;&#10;# Conflicts:&#10;#&#9;resources/saveData/timeTable.ser&#10;">
+      <created>1490048066679</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1490048066679</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -870,7 +924,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -886,7 +940,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17430703" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17750533" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -960,7 +1014,8 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="added font to initial load" />
     <MESSAGE value="changed player size&#10;changed x key to w key for clarity&#10;shrunk obstacle bounding boxes to reduce edge catching" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed player size&#10;changed x key to w key for clarity&#10;shrunk obstacle bounding boxes to reduce edge catching" />
+    <MESSAGE value="Merge branch 'createPath' of https://github.com/studoggpro/Maze_Game into createPath&#10;&#10;# Conflicts:&#10;#&#9;resources/saveData/timeTable.ser&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'createPath' of https://github.com/studoggpro/Maze_Game into createPath&#10;&#10;# Conflicts:&#10;#&#9;resources/saveData/timeTable.ser&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -973,13 +1028,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="430" column="0" lean-forward="false" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -1233,19 +1281,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/fxml/RoomController.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="255">
           <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/controllers/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4417">
+        <state relative-caret-position="2142">
           <caret line="164" column="77" lean-forward="false" selection-start-line="164" selection-start-column="77" selection-end-line="164" selection-end-column="77" />
           <folding />
         </state>
@@ -1261,7 +1309,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="1037">
           <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
           <folding />
         </state>
@@ -1269,8 +1317,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/stukeenan/Maze_Game/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
