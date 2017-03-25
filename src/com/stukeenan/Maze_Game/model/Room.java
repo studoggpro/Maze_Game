@@ -20,6 +20,7 @@ public class Room {
     private Door door = new Door();
     private double dX;
     private double dY;
+    private double[] roomSizeDivider = new double[5];
     public static int mazeLength = 3; //NUMBER OF ROOMS
     private Random random = new Random();
     public List<Pane> roomList = new ArrayList<>();
@@ -40,20 +41,21 @@ public class Room {
         smHeight = (roomSize[1] - 130) / dY;
     }
 
-    private void generateWidth() {
-        double x = 600 * Math.random();
-        if (x < 250) {
-            generateWidth();
-        } else
-            roomSize[0] = x;
+    private void fillRoomSizeDividerArray(){
+        double x = .5;
+        for (int i = 0; i < 5; i++) {
+            roomSizeDivider[i] = x;
+            if (x == .7){
+                x = .8;
+            } else {
+                x += .1;
+            }
+        }
     }
 
-    private void generateHeight() {
-        double y = 600 * Math.random();
-        if (y < 250) {
-            generateHeight();
-        }else
-            roomSize[1] = y;
+    private void generateRoomDimensions() {
+        roomSize[0] = 600 * roomSizeDivider[random.nextInt(5)];
+        roomSize[1] = 600 * roomSizeDivider[random.nextInt(5)];
     }
 
     private Point point(){
@@ -95,10 +97,10 @@ public class Room {
 
     public void generateRooms(){
         int roomCount = 0;
+        fillRoomSizeDividerArray();
         for (int i = 0; i < mazeLength ; i++) {
             List<Node> solidObjectList = new ArrayList<>();
-            generateWidth();
-            generateHeight();
+            generateRoomDimensions();
             calculateRoomDividers();
             GridPane room = new GridPane();
             room.setGridLinesVisible(false);
